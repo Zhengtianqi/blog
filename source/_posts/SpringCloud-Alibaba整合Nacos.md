@@ -1,13 +1,11 @@
-title: SpringCloud-Alibaba整合Nacos
+title: SpringCloud-Alibaba整合Nacos配置中心
 author: 郑天祺
 tags:
-
   - nacos-config
   - SpringCloud
 categories:
   - SpringCloud
 date: 2019-11-27 17:53:00
-
 ---
 
 在 Nacos Spring Cloud 中，dataId 的完整格式如下：${prefix}-${spring.profile.active}.${file-extension}
