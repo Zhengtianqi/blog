@@ -137,7 +137,7 @@ public class EsRestHighLevelClient {
 
 ```
 
-3、查询（简单举例）
+# 3、查询（简单举例）
 
 ```java
     /**
@@ -165,7 +165,7 @@ public class EsRestHighLevelClient {
     }
 ```
 
-4、插入或更新（简单举例）
+# 4、插入或更新（简单举例）
 
 ```java
  try {
@@ -188,7 +188,7 @@ public class EsRestHighLevelClient {
         }
 ```
 
-5、删除（简单举例）
+# 5、删除（简单举例）
 
 ```java
         DeleteRequest deleteRequest = new DeleteRequest("person", String.valueOf(person.getId()));
@@ -200,7 +200,7 @@ public class EsRestHighLevelClient {
         }
 ```
 
-6、遍历篮子（简单举例）
+# 6、遍历篮子（简单举例）
 
 ```java
     @Override
