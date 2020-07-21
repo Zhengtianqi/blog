@@ -1,6 +1,7 @@
 title: TCP握手、挥手协议
 author: 郑天祺
 tags:
+
   - TCP/IP
 categories:
   - 网络
@@ -29,8 +30,6 @@ date: 2019-08-30 15:58:00
 ![](/img/四次挥手协议.png)
 
 第一次：A和B打电话，通话即将结束后，A说“我有事先忙了，我得关闭链接了”，
-
-3) demo
 
 第一次握手(SYN=1, seq=x)
 
