@@ -1,12 +1,11 @@
 title: SpringCloud-Alibaba整合Nacos服务注册发现
 author: 郑天祺
 tags:
-
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
+  - ''
 date: 2019-12-03 15:18:00
-
 ---
 
 # 一、服务注册

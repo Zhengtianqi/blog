@@ -1,12 +1,11 @@
 title: Kafka的简单使用
 author: 郑天祺
 tags:
-
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
+  - ''
 date: 2020-12-14 12:59:00
-
 ---
 
 # 1、安装kafka

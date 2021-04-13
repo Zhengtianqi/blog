@@ -1,10 +1,9 @@
 title: SpringCloud运维接口
 author: 郑天祺
 tags:
-
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
 date: 2020-12-14 11:31:00
 ---
 

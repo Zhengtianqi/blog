@@ -3,9 +3,8 @@ author: 郑天祺
 tags:
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
 date: 2020-12-14 11:31:00
-
 ---
 
 # 1、配置中心管理服务

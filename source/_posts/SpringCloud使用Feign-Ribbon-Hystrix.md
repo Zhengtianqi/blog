@@ -3,9 +3,8 @@ author: 郑天祺
 tags:
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
 date: 2020-12-14 12:39:00
-
 ---
 
 # 1、引入依赖

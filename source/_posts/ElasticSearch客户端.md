@@ -1,13 +1,11 @@
 title: ElasticSearch客户端
 author: 郑天祺
 tags:
-
-  - EsClient
   - es
 categories:
-  - elasticsearch
+  - CICD
+  - ''
 date: 2020-07-15 11:10:00
-
 ---
 
 以下为springboot整合elasticsearch

@@ -3,7 +3,8 @@ author: 郑天祺
 tags:
   - es
 categories:
-  - elasticsearch
+  - CICD
+  - ''
 date: 2020-07-15 10:51:00
 ---
 

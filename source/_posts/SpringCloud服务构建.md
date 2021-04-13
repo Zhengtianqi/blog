@@ -1,12 +1,10 @@
 title: SpringCloud服务构建
 author: 郑天祺
 tags:
-
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
 date: 2020-12-14 11:30:00
-
 ---
 
 # 1、添加依赖

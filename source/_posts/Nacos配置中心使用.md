@@ -1,10 +1,11 @@
 title: Nacos配置中心使用
 author: 郑天祺
 tags:
+  - SpringCloud
   - nacos-config
-  - SpringCloud
 categories:
-  - SpringCloud
+  - spring
+  - ''
 date: 2019-11-25 16:38:00
 ---
 

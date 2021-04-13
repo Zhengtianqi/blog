@@ -1,12 +1,11 @@
 title: SpringCloud Ribbon参数配置
 author: 郑天祺
 tags:
-
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
+  - ''
 date: 2020-12-14 11:33:00
-
 ---
 
 # Ribbon策略类型

@@ -1,12 +1,10 @@
 title: SpringCloud client配置
 author: 郑天祺
 tags:
-
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
 date: 2020-12-14 11:32:00
-
 ---
 
 # 1、pom.xml添加starter依赖

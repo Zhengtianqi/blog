@@ -3,9 +3,9 @@ author: 郑天祺
 tags:
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
+  - ''
 date: 2020-12-14 11:33:00
-
 ---
 
 Hystrix修改默认配置有两种方式，注解参数注入，和application.yml配置文件配置。

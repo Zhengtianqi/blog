@@ -1,12 +1,10 @@
 title: SpringCloud健康检查
 author: 郑天祺
 tags:
-
   - SpringCloud
 categories:
-  - SpringCloud
+  - spring
 date: 2020-12-14 11:31:00
-
 ---
 
 # 服务健康检查：
