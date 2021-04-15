@@ -251,8 +251,8 @@ gitalk:
 
 
 gitment:
-  owner: yelog
-  repo: yelog.github.io
+  owner: Zhengtianqi
+  repo: Zhengtianqi.github.io
   client_id:
   client_secret:
   # gitment : 通过github issue实现的评论系统
