@@ -64,9 +64,9 @@ menu:
       on: false
       url: /photo
       type: 1  # 跳转类型 1：站内异步跳转
-    叶落阁:
+    郑天祺:
       on: false
-      url: http://zhengtianqi.org/
+      url: https://zhengtianqi.github.io/
       type: 2  # 跳转类型 2：当前页面跳转
     github:
       on: false
