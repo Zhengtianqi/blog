@@ -118,19 +118,51 @@ $ git log   // 查看历史日志
 
 ####         a）远程仓库相关命令 
 
-检出仓库： $ git clone http:/zzzzzzzz.git
+检出仓库： 
 
-查看远程仓库：$ git remote -v
+```java
+$ git clone http:/zzzzzzzz.git
+```
 
-添加远程仓库：$ git remote add [name] [url]
+查看远程仓库：
 
-删除远程仓库：$ git remote rm [name]
+```java
+$ git remote -v
+```
 
-修改远程仓库：$ git remote set-url --push       [name] [newUrl]
+添加远程仓库：
 
-拉取远程仓库：$ git pull [remoteName]       [localBranchName]   // 从其他的版本库（既可以是远程的也可以是本地的）将代码更新到本地，例如：'git pull origin master'就是将origin这个版本库的代码更新到本地的master主枝
+```java
+$ git remote add [name] [url]
+```
 
-推送远程仓库：$ git push [remoteName]       [localBranchName]    // 将本地commit的代码更新到远程版本库中，例如'git push origin'就会将本地的代码更新到名为orgin的远程版本库中
+删除远程仓库：
+
+```java
+$ git remote rm [name]
+```
+
+修改远程仓库：
+
+```java
+$ git remote set-url --push [name] [newUrl]
+```
+
+拉取远程仓库：
+
+```java
+$ git pull [remoteName] [localBranchName]
+```
+
+从其他的版本库（既可以是远程的也可以是本地的）将代码更新到本地，例如：'git pull origin master'就是将origin这个版本库的代码更新到本地的master主枝
+
+推送远程仓库：
+
+```java
+$ git push [remoteName] [localBranchName] 
+```
+
+将本地commit的代码更新到远程版本库中，例如'git push origin'就会将本地的代码更新到名为orgin的远程版本库中
 
 如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，如下：
 
@@ -142,7 +174,17 @@ $git push origin test:test    // 提交本地test分支作为远程的test分支
 
 ####         b）分支(branch)操作相关命令 
 
-查看本地分支：$ git branch          // 列出本地所有的分支 对分支的增、删、查等操作，例如'git branch       new_branch'会从当前的工作版本创建一个叫做new_branch的新分支，'git branch -D new_branch'就会强制删除叫做new_branch的分支
+查看本地分支：
+
+```java
+$ git branch 
+```
+
+列出本地所有的分支 对分支的增、删、查等操作，例如'git branch       new_branch'会从当前的工作版本创建一个叫做new_branch的新分支
+
+```java
+$ git branch -D new_branch ----就会强制删除叫做new_branch的分支
+```
 
 查看远程分支：
 

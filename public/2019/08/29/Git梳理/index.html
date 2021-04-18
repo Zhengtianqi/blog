@@ -1589,7 +1589,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-04-18 20:35:14'>2019-08-29 10:28</time>
+            发布时间 : <time class="date" title='最后更新: 2021-04-18 20:41:49'>2019-08-29 10:28</time>
         
     </div>
     <div class="article-meta">
@@ -1702,20 +1702,41 @@ $ git log   // 查看历史日志
 </code></pre>
 <h3 id="4）基本操作">4）基本操作</h3>
 <h4 id="a）远程仓库相关命令">a）远程仓库相关命令</h4>
-<p>检出仓库： $ git clone http:/zzzzzzzz.git</p>
-<p>查看远程仓库：$ git remote -v</p>
-<p>添加远程仓库：$ git remote add [name] [url]</p>
-<p>删除远程仓库：$ git remote rm [name]</p>
-<p>修改远程仓库：$ git remote set-url --push       [name] [newUrl]</p>
-<p>拉取远程仓库：$ git pull [remoteName]       [localBranchName]   // 从其他的版本库（既可以是远程的也可以是本地的）将代码更新到本地，例如：'git pull origin master’就是将origin这个版本库的代码更新到本地的master主枝</p>
-<p>推送远程仓库：$ git push [remoteName]       [localBranchName]    // 将本地commit的代码更新到远程版本库中，例如’git push origin’就会将本地的代码更新到名为orgin的远程版本库中</p>
+<p>检出仓库：</p>
+<pre><code class="language-java">$ git clone http:/zzzzzzzz.git
+</code></pre>
+<p>查看远程仓库：</p>
+<pre><code class="language-java">$ git remote -v
+</code></pre>
+<p>添加远程仓库：</p>
+<pre><code class="language-java">$ git remote add [name] [url]
+</code></pre>
+<p>删除远程仓库：</p>
+<pre><code class="language-java">$ git remote rm [name]
+</code></pre>
+<p>修改远程仓库：</p>
+<pre><code class="language-java">$ git remote set-url --push [name] [newUrl]
+</code></pre>
+<p>拉取远程仓库：</p>
+<pre><code class="language-java">$ git pull [remoteName] [localBranchName]
+</code></pre>
+<p>从其他的版本库（既可以是远程的也可以是本地的）将代码更新到本地，例如：'git pull origin master’就是将origin这个版本库的代码更新到本地的master主枝</p>
+<p>推送远程仓库：</p>
+<pre><code class="language-java">$ git push [remoteName] [localBranchName] 
+</code></pre>
+<p>将本地commit的代码更新到远程版本库中，例如’git push origin’就会将本地的代码更新到名为orgin的远程版本库中</p>
 <p>如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，如下：</p>
 <pre><code class="language-java">$git push origin test:master    // 提交本地test分支作为远程的master分支 
 
 $git push origin test:test    // 提交本地test分支作为远程的test分支 
 </code></pre>
 <h4 id="b）分支-branch-操作相关命令">b）分支(branch)操作相关命令</h4>
-<p>查看本地分支：$ git branch          // 列出本地所有的分支 对分支的增、删、查等操作，例如’git branch       new_branch’会从当前的工作版本创建一个叫做new_branch的新分支，'git branch -D new_branch’就会强制删除叫做new_branch的分支</p>
+<p>查看本地分支：</p>
+<pre><code class="language-java">$ git branch 
+</code></pre>
+<p>列出本地所有的分支 对分支的增、删、查等操作，例如’git branch       new_branch’会从当前的工作版本创建一个叫做new_branch的新分支</p>
+<pre><code class="language-java">$ git branch -D new_branch ----就会强制删除叫做new_branch的分支
+</code></pre>
 <p>查看远程分支：</p>
 <pre><code class="language-java">$ git branch -r
 </code></pre>
@@ -1851,7 +1872,7 @@ bin
     <p><span class="copy-title">字数:</span><span class="post-count">2.5k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="ztq">ztq</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-29, 10:28:00</p>
-    <p><span class="copy-title">最后更新:</span>2021-04-18, 20:35:14</p>
+    <p><span class="copy-title">最后更新:</span>2021-04-18, 20:41:49</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/29/Git%E6%A2%B3%E7%90%86/" title="Git梳理">https://zhengtianqi.github.io/2019/08/29/Git%E6%A2%B3%E7%90%86/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
