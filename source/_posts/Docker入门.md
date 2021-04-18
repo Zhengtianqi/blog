@@ -12,8 +12,8 @@ date: 2020-12-14 13:13:00
 
 ## docker概念		
 
-docker和虚拟机VM结构非常相似，但是docker并非虚拟机技术，容器除了运行其中的应用之外，基本不消耗额外的系统资源，虚拟机需要单独分配 独占内存、磁盘等资源；
-		docker最初的设计优势，正是它比虚拟机更节省内存，启动更快。Docker不停地给大家宣传，”虚拟机需要数分钟启动，而Docker容器只需要50毫秒”。
+​		docker和虚拟机VM结构非常相似，但是docker并非虚拟机技术，容器除了运行其中的应用之外，基本不消耗额外的系统资源，虚拟机需要单独分配 独占内存、磁盘等资源；
+​		docker最初的设计优势，正是它比虚拟机更节省内存，启动更快。Docker不停地给大家宣传，”虚拟机需要数分钟启动，而Docker容器只需要50毫秒”。
 
 ![image-20201214131527522](/img/image-20201214131527522.png)
 
@@ -35,7 +35,11 @@ docker和虚拟机VM结构非常相似，但是docker并非虚拟机技术，容
 
 安装 参考[docker官网](http://www.docker.com/products/docker)
 
-查看安装版本 docker version
+查看安装版本 
+
+```java
+docker version
+```
 
 ![image-20201214131734289](/img/image-20201214131734289.png)
 
@@ -51,37 +55,48 @@ docker和虚拟机VM结构非常相似，但是docker并非虚拟机技术，容
 
 ## 重启docker 
 
+```java
 systemctl start docker
+```
 
 ## 查看资源库有tomcat镜像
 
+```java
 docker search tomcat
+```
 
 ![image-20201214131814678](/img/image-20201214131814678.png)
 
 ## 从国内docker镜像库下载tomcat、centos
 
+```java
 docker pull tomcat/centos/nginx
+```
 
 ## 查看有哪些镜像 
 
+```java
 docker images
+```
 
 ![image-20201214131847691](/img/image-20201214131847691.png)
 
 ## 启动基于tomcat,centos镜像启动容器 
 
-​    docker run -p 8081:8080 tomcat # 若端口被占用，可以指定容器和主机的映射端口 前者是外围访问端口：后者是容器内部端口
+```java
+  docker run -p 8081:8080 tomcat 
+```
 
-​    docker run -dit -p 4000:4000 centos 
+​	若端口被占用，可以指定容器和主机的映射端口 前者是外围访问端口：后者是容器内部端口
 
-   -d 以守护态运行 
+```java
+docker run -dit -p 4000:4000 centos 
 
-   -p 宿主机端口映射容器端口 
-
-   -i 允许容器内标准输入 
-
-   -t 新容器内指定一个伪终端 
+-d 以守护态运行 
+-p 宿主机端口映射容器端口 
+-i 允许容器内标准输入 
+-t 新容器内指定一个伪终端 
+```
 
 浏览器查看访问容器tomcat实例http://192.168.6.71:8081/
 
@@ -91,15 +106,25 @@ docker images
 
 ## 进去伪终端查看 
 
-   docker登录容器 docker exec -it hardcore_edison  "/bin/bash"
+docker登录容器 
+
+```java
+docker exec -it hardcore_edison  "/bin/bash"
+```
 
 ![image-20201214132014480](/img/image-20201214132014480.png)
 
 ## 本地文件复制容器中
 
-docker cp localFile containerID:targetAddress 
+```java
+docker cp localFile containerID:targetAddress
+```
 
- 命令： docker cp gag-material.war [b5e1e6975083:/usr/local/tomcat/webapps](http://b5e1e6975083/usr/local/tomcat/webapps) 
+ 命令： 
+
+```java
+docker cp gag-material.war [b5e1e6975083:/usr/local/tomcat/webapps](http://b5e1e6975083/usr/local/tomcat/webapps) 
+```
 
 将本地应用war包上传到tomcat容器的webapps下面，加载应用成功，浏览器显示：
 
@@ -113,10 +138,18 @@ docker cp localFile containerID:targetAddress
 ![image-20201214132127621](/img/image-20201214132127621.png)
 
 在某一个目录下面创建一个专门存放此demo的目录，也就是Dockerfile所在的context：
+
+```java
 mkdir dockerDemo && cd dockerDemo && touch Dockerfile
+```
 
 接下来就开始编写Dockerfile文件了（注意Dockerfile的D需要大写）
-  vim Dockerfile
+
+```java
+ vim Dockerfile
+```
+
+
 
 ```java
 #############################################################  
@@ -171,19 +204,25 @@ docker build -t centos_nginx:v1 .
 
 ![image-20201214132309723](/img/image-20201214132309723.png)
 
+```java
 docker images
+```
 
 ![image-20201214132326043](/img/image-20201214132326043.png)
 
 ## 启动容器
 
+```java
 docker run -d -p80:80 centos_nginx:v1 /usr/local/nginx/sbin/nginx -g "daemon off;"
+```
 
 ![image-20201214132343909](/img/image-20201214132343909.png)
 
 ## 查看镜像对外暴露端口号
 
+```java
 docker port containerID
+```
 
 ![image-20201214132401207](/img/image-20201214132401207.png)
 
