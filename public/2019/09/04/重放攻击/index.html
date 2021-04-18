@@ -6,22 +6,31 @@
   <meta name="keywords" content=" 可信 , 网络安全 ">
   <meta name="description" content="重放攻击 | 个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="1、什么是分布式锁？ ​		当多个进程在同一个系统中，用分布式锁控制多个进程对资源的访问。传统的单体应用单机部署情况下，可以使用java并发处理相关的API进行互斥控制。分布式系统后由于多线程，多进程分布在不同机器上，使单机部署情况下的并发控制锁策略失效，为了解决跨JVM互斥机制来控制共享资源的访问，这就是分布式锁的来源；分布式锁应用场景大都是高并发、大流量场景。 2、分布式锁实现 （1）、red">
+<meta name="description" content="1、什么是重构 ​		在百度百科里给出的定义是:在不改变软件系统外部行为的前提下，改善它的内部结构。通过调整程序代码改善软件的质量、性能，使其程序的设计模式和架构更趋合理，提高软件的扩展性和维护性。 ​		也许有人会问，为什么不在项目开始时多花些时间把设计做好，而要以后花时间来重构呢？ ​		首先要知道一个完美得可以预见未来任何变化的设计，或一个灵活得可以容纳任何扩展的设计是不存在的。系统设计人员">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分布式锁">
-<meta property="og:url" content="https://zhengtianqi.github.io/2021/04/18/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/index.html">
+<meta property="og:title" content="重构">
+<meta property="og:url" content="https://zhengtianqi.github.io/2021/04/18/%E9%87%8D%E6%9E%84/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="1、什么是分布式锁？ ​		当多个进程在同一个系统中，用分布式锁控制多个进程对资源的访问。传统的单体应用单机部署情况下，可以使用java并发处理相关的API进行互斥控制。分布式系统后由于多线程，多进程分布在不同机器上，使单机部署情况下的并发控制锁策略失效，为了解决跨JVM互斥机制来控制共享资源的访问，这就是分布式锁的来源；分布式锁应用场景大都是高并发、大流量场景。 2、分布式锁实现 （1）、red">
+<meta property="og:description" content="1、什么是重构 ​		在百度百科里给出的定义是:在不改变软件系统外部行为的前提下，改善它的内部结构。通过调整程序代码改善软件的质量、性能，使其程序的设计模式和架构更趋合理，提高软件的扩展性和维护性。 ​		也许有人会问，为什么不在项目开始时多花些时间把设计做好，而要以后花时间来重构呢？ ​		首先要知道一个完美得可以预见未来任何变化的设计，或一个灵活得可以容纳任何扩展的设计是不存在的。系统设计人员">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zhengtianqi.github.io/img/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.jpg">
-<meta property="og:image" content="https://zhengtianqi.github.io/img/%E5%9F%BA%E4%BA%8EETCD%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%88%86%E6%9E%90.png">
-<meta property="og:image" content="https://zhengtianqi.github.io/img/%E5%9F%BA%E4%BA%8EZookeeper%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81.png">
-<meta property="article:published_time" content="2021-04-18T05:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-18T05:55:24.086Z">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618675966507.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618675987731.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676025236.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676190337.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676232016.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676280257.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676358941.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676411155.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676461026.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676506490.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618676526483.png">
+<meta property="og:image" content="https://zhengtianqi.github.io/img/1618677203153.png">
+<meta property="article:published_time" content="2021-04-17T16:07:00.000Z">
+<meta property="article:modified_time" content="2021-04-17T16:37:05.578Z">
 <meta property="article:author" content="ztq">
-<meta property="article:tag" content="分布式锁">
+<meta property="article:tag" content="重构">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zhengtianqi.github.io/img/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.jpg">
+<meta name="twitter:image" content="https://zhengtianqi.github.io/img/1618675966507.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -224,7 +233,7 @@
                     <div data-rel="软件管理">
                         
                         软件管理
-                        <small>(4)</small>
+                        <small>(3)</small>
                         
                     </div>
                     
@@ -280,7 +289,7 @@
                     <div data-rel="CICD">
                         
                         CICD
-                        <small>(3)</small>
+                        <small>(4)</small>
                         
                     </div>
                     
@@ -728,7 +737,7 @@
             <span class="post-date" title="2020-12-14 13:34:00">2020/12/14</span>
         </a>
         
-        <a  class="全部文章 软件管理 "
+        <a  class="全部文章 CICD "
            href="/2020/12/14/Docker%E5%85%A5%E9%97%A8/"
            data-tag="docker"
            data-author="" >

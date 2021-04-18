@@ -3,9 +3,8 @@ author: 郑天祺
 tags:
   - docker
 categories:
-  - 软件管理
+  - CICD
 date: 2020-12-14 13:13:00
-
 ---
 
 
