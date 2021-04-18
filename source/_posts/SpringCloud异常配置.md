@@ -4,17 +4,10 @@ tags:
 categories:
   - spring
 date: 2020-12-14 11:34:00
----
 
 ---
-title: SpringCloud异常配置
-author: 郑天祺
-tags:
 
-  - SpringCloud
-categories:
-  - SpringCloud
-date: 2020-12-14 11:33:00
+
 
 
 1.【强制】Java 类库中定义的可以通过预检查方式规避的 RuntimeException 异常不应该通过catch 的方式来处理，比如:NullPointerException，IndexOutOfBoundsException 等等。
