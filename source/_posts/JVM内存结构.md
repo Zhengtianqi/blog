@@ -1,6 +1,7 @@
 title: JVM内存结构
 author: 郑天祺
 tags:
+
   - JVM
 categories:
   - 面试
@@ -8,7 +9,7 @@ date: 2020-09-27 11:55:00
 
 ---
 
-![image-20200927115654479](/img/JVM Memory.png)
+![](/img/JVMMemory.png)
 
 # 1、方法区
 
