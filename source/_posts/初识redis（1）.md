@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 title: 初识redis（1）-数据结构
 author: ztq
 tags:
-=======
-title: 初识redis（1）
-author: ztq
-tags:
-
->>>>>>> e740bd3f9ba77c6a9561319e61a8db0024563732
   - redis
 categories:
   - 数据库
 date: 2021-07-31 12:49:00
-<<<<<<< HEAD
-=======
-
->>>>>>> e740bd3f9ba77c6a9561319e61a8db0024563732
 ---
 
 # 1、Redis数据结构介绍

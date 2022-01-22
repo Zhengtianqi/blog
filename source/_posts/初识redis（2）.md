@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 title: 初识redis（2）-基本特性
 author: ztq
 tags:
-=======
-title: 初识redis（2）
-author: ztq
-tags:
-
->>>>>>> e740bd3f9ba77c6a9561319e61a8db0024563732
   - redis
 categories:
   - 数据库
 date: 2021-08-01 22:08:00
-<<<<<<< HEAD
-=======
-
->>>>>>> e740bd3f9ba77c6a9561319e61a8db0024563732
 ---
 
 # 1、排序
@@ -43,11 +32,7 @@ SORT source-key [BY pattern] [LIMIT offset count] [GET pattern [GETpattern ...] 
 
 ​		Redis的基本事务( basic transaction)需要用到MULTI命令和EXEC命令，这种事务可以让一个客户端在不被其他客户端打断的情况下执行多个命令。和关系数据库那种可以在执行的过程中进行回滚( rollback)的事务不同，在Redis里面，被MULTI命令和EXEC命令包围的所有命令会一个接-一个地执行， 直到所有命令都执行完毕为止。当一个事务执行完毕之后，Redis 才会处理其他客户端的命令。
 
-<<<<<<< HEAD
 # 3、键的过期时间
-=======
-## 3、键的过期时间
->>>>>>> e740bd3f9ba77c6a9561319e61a8db0024563732
 
 ​		在使用Redis存储数据的时候，有些数据可能在某个时间点之后就不再有用了，用户可以使用DEL命令显式地删除这些无用数据,也可以通过Redis的过期时间(expiration)特性来让一个键在给定的时限(timeout)之后自动被删除。当我们说一个键“带有生存时间(time to live)”或者一个键“会在特定时间之后过期(expire)”时，我们指的是Redis会在这个键的过期时间到达时自动删除该键。
 
