@@ -1,4 +1,4 @@
-title: Redis数据结构与对象（一）-链表
+title: Redis数据结构与对象（二）-链表
 author: ztq
 tags:
   - redis
