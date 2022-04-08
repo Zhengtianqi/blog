@@ -299,7 +299,7 @@ public class AWSS3Util {
 
 
     private volatile static AWSS3Util awsS3Util;
-    private static AmazonS3 s3;
+    private volatile static AmazonS3 s3;
     private static String region = "default";
 
     private AWSS3Util() {

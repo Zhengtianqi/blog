@@ -147,3 +147,13 @@ public class CountDownLatchTest {
 # 四、CountDownLatch 的不足
 
 CountDownLatch是一次性的，不可能重新初始化或者修改其内部计数器的值，当CountDownLatch使用完毕后，它不能再次被使用
+
+# 五、CountDownLatch与CyclicBarrier区别
+
+countDownLatch：
+计数器：计数器只能使用一次。
+等待：一个线程或多个等待另外n个线程完成之后才能执行。
+
+CyclicBarrier：
+计数器：计数器可以重置(通过reset()方法)。
+等待：n个线程相互等待，任何一个线程完成之前，所有的线程都必须等待。
