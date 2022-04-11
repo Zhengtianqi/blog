@@ -53,10 +53,10 @@ cat /var/log/mysqld.log | grep password
 mysql -u root -p
 use mysql;
 alter user 'root'@'localhost' identified by 'zheng&test123';
-exit;
 select host from user where user='root';
 update user set host = '%' where user ='root';
 flush privileges;
+exit;
 ```
 
 ## step4、my.cnf配置
