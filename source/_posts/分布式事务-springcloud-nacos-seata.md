@@ -66,6 +66,15 @@ import io.seata.spring.annotation.GlobalTransactional;
         stockFeignClient.deduct(commodityCode, count);
     }
 ```
+# 总结
+1、全局锁使用数据库表实现，lock_table。
+
+2、全局锁用于读写隔离，如果有多个分布式事务同时操作同一行数据库记录，那么可以保证数据的正确性
+
+3、注册分支事务的时候会插入lock_table记录(正常情况)，全局事务提交的时候会删除lock_table。
+
+4、写隔离，如果要用分布式事务，那么对于同一张表更新时建议全使用@GlobalTransaction.
+读隔离，使用@GlobalTransactional+select for update 或者 @GlobalLock+@Transactional+select for update
 # 参考文献
 
 github：https://github.com/seata/seata-samples/tree/master/springcloud-nacos-seata
@@ -74,4 +83,9 @@ nacos：https://nacos.io/zh-cn/docs/quick-start.html
 
 seata：https://seata.io/
 
+源码分析：
+
+https://blog.csdn.net/qq_43437874/article/details/123131592
+
+https://blog.51cto.com/u_12856278/3631071
 
