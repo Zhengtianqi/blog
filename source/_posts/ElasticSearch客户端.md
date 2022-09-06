@@ -3,7 +3,7 @@ author: 郑天祺
 tags:
   - es
 categories:
-  - CICD
+  - 大数据
   - ''
 date: 2020-07-15 11:10:00
 ---
