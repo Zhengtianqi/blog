@@ -109,7 +109,7 @@ public class FileOuputDemo {
 FileInputStream类 和 FileOutputStream类总是成对出现的，一个用作输入流，另一个自然是输出流
 我们在输入流中使用 byte（字节）数组 来存储我们的数据，因此我们不必考虑数据格式，所以说这两种操作的效率会比较高
 
-## Stream流（字符流）
+## （3）Stream流（字符流）
 ### FileWriter类 与 BufferedWriter类使用
 前面我们FileInputStream时，使用的是字节流，但是有个问题无法解决，它只能读取英文字符，而中文字符是无法读取的，会出现奇怪的东西。
 ```java
@@ -176,7 +176,7 @@ public class FileReaderDemo {
 	}
 }
 ```
-## 序列化与反序列化
+## （4）序列化与反序列化
 简化成一句话、序列化是把Java对象存在一个硬盘，网络，以便传输
 也就是把我们的数据永久的存放到计算机当中
 
