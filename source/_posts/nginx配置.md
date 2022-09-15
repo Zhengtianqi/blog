@@ -216,7 +216,7 @@ return $uri;
 return  200 '$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" "$http_x_forwarded_for"';
 ```
 
-# 、常用的全局变量
+# 四 、常用的全局变量
 ```java
 例：http://www.abc.com:99/aa/bb/test.jsp
 $host　　　　　　　　www.abc.com
@@ -225,7 +225,7 @@ $request_uri　　　　 /aa/bb/test.jsp
 $document_root　　 /pm_code
 $request_filename　　/pm_code/aa/bb/test.jsp
 ```
-# 三、root和alias指令
+# 五、root和alias指令
 ## root
 ```java
 location /i/ {  
@@ -245,7 +245,7 @@ location /i/ {
 - alias 只能作用在location中，而root可以存在server、http和location中。
 - alias 后面必须要用 “/” 结束，否则会找不到文件，而 root 则对 ”/” 可有可无。
 
-# 四、Gzip
+# 六、Gzip
 将响应报⽂发送⾄客户端之前可以启⽤压缩功能，这能够有效地节约带宽，并提⾼响应⾄客户端的速度。Gzip压缩可以配置http,server和location模块下。
 配置如下：
 ```java
@@ -275,7 +275,7 @@ gzip_disable "MSIE [1-6]\.";		#配置禁用gzip条件，支持正则。此处表
 gzip vary on;					#选择支持vary header；改选项可以让前端的缓存服务器缓存经过gzip压缩的页面; 这个可以不写，表示在传送数据时，给客户端说明我使用了gzip压缩
 ```
 
-# 四、配置https示例
+# 七、配置https示例
 ```java
 http {
         include mime.types;
