@@ -156,7 +156,7 @@ server {
 	}
 }
 # 那么用户请求http://x.x.x.x/subdir/other时，匹配到该区块，nginx反代会保留虚拟路径
-# nginx实际转发后端的请求URL为http://http://x.x.x.x/subdir/other
+# nginx实际转发后端的请求URL为http://http://y.y.y.y/subdir/other
 ```
 示例2
 ```java
@@ -169,7 +169,7 @@ server {
 	}
 }
 # 那么用户请求http://x.x.x.x/subdir/other时，匹配到该区块，nginx反代不会保留虚拟路径，
-# nginx实际转发后端的请求URL为http://http://x.x.x.x//other
+# nginx实际转发后端的请求URL为http://http://y.y.y.y//other
 ```
 # 二、rewrite重写
 ## rewrite使用场景：
